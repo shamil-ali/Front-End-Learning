@@ -29,3 +29,31 @@ while(i < 10) {
   i++;
   console.log(`${i}`);
 }console.log(`${j}`); }
+
+// Exercise 5
+
+let now = new Date(); 
+let day = now.getDay();
+switch (day) {
+  case 0:
+    console.log(`It's Sunday`);
+    break;
+  case 1:
+    console.log(`It's Monday`);
+  case 2:
+    console.log(`It's Tuesday`);
+  case 3:
+    console.log(`It's Wednesday`);
+  case 4:
+    console.log(`It's Thursday`);
+  case 5:
+    console.log(`It's Friday`);
+    console.log(`It's a Weekday`);
+    break;
+  case 6:
+    console.log(`It's Saturday`);
+    break;
+  default:
+    console.log(`Excuse me?`);
+    break;
+}
