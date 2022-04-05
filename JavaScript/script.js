@@ -261,3 +261,94 @@
 // 2 === `2` ? console.log(true) : console.log(false);
 
 // the STRICTLY EQUAL OPERATOR '===' checks type and value
+
+// OBJECTS, ARRAYS and JSON
+
+// OBJECTS
+
+/*
+
+*/
+
+// let animal = new Object();
+// console.log(typeof(animal));
+
+// animal[`name`] = `Clifford`
+// animal[`type`] = `Dog`
+// animal[`size`] = `Big`
+
+// console.log(animal);
+// console.log(animal.type);
+
+// animal.colour = `red`;
+// console.log(animal);
+
+// LITERAL NOTATION
+
+let vehicle = {
+	type : `bike`,
+	seats : 1,
+	wheels : 2
+}
+
+// console.log(vehicle);
+// console.log(vehicle.seats);
+
+// Data can be stored in an ARRAY
+
+let garage = [
+	vehicle,
+	{type:`car`,seats:5,wheels:4}
+]
+
+// console.log(garage);
+
+//  Looping through an array
+
+let x = [`a`,`b`,`c`,`d`,`e`];
+
+for(let i = 0; i<x.length; i++){
+    // console.log(x[i]);
+}
+
+// ENHANCED FOR loops
+
+/*
+		Work with arrays of items, will always loop through EVERY item
+*/
+for (let item of x) {
+	// console.log(item);
+}
+
+// Specific Methods to act on ARRAYS
+
+// REVERSE
+
+// console.log(x.reverse());
+
+// JOIN
+
+// console.log(x.join(`, the next letter is `));
+
+// JSON -> JavaScript Object Notation
+
+/*
+	Literal notaiton for JS objects
+*/
+
+let newJSON = {
+	name : `cameron`,
+	age : 29
+}
+
+// To convert JSON to different datatypes we have to use OVERLOADED methods
+
+// JSON to String
+
+let str = JSON.stringify(newJSON);
+
+console.log(newJSON);
+console.log(str);
+
+let person = JSON.parse(`{"name":"ellie","age":43}`);
+console.log(person);
