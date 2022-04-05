@@ -352,3 +352,63 @@ console.log(str);
 
 let person = JSON.parse(`{"name":"ellie","age":43}`);
 console.log(person);
+
+// FUNCTIONS
+
+/*
+		A block of code that does a thing!
+		They are envoked (or run) when 'called'
+		DRY principles (don't repeat yourself)
+		they can take arguments
+		Globally scoped
+*/
+
+function hello(message) {
+		console.log(message);
+}
+
+hello(true);
+
+// RETURNS
+
+/*
+		When a funciton reaches a return it stops
+*/
+
+let bye = false;
+
+function goodbye() {
+		console.log(`goodbye`);
+		return bye = true;
+}
+
+console.log(bye);
+
+goodbye();
+
+console.log(bye);
+
+//  VARIABLE RETURNS
+
+function sum(a , b) {
+		return a + b;
+}
+
+console.log(sum(3,2));
+
+// ARROW FUNCTIONS
+
+function log(data) {
+		console.log(data);
+}
+
+log = (data) => {
+		console.log(data);
+}
+
+log = (data) => {console.log(data)}
+
+let log2 = data => console.log(data);
+
+log("message1");
+log2("message2");
