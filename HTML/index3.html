@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- CSS ONLY -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+    <!-- FORMS -->
+    <!-- 2 MAIN ATTRIBUTES -->
+    <!-- METHOD and ACTION -->
+    <!-- METHOD -> HOW TO SEND DATA -->
+    <!-- ACTION -> WHERE TO SEND DATA -->
+
+    <!-- GET METHOD -->
+    <!-- IT SENDS INPPUT INTO THE URL BAR -->
+    <!-- WITH A KEY : VALUE PAIR -->
+    <!-- USES A HYPERLINK -->
+
+    <form method="get" action="">
+
+        <h4>
+            GET form
+        </h4>
+
+        <!-- AN INPUT FOR TEXT -->
+        <input name="query" type="text">
+
+        <!-- A BUTTON TO SUBMIT THE FORM -->
+        <button type="submit">
+            SEND
+        </button>
+
+    </form>
+
+    <!-- POST METHOD -->
+    <!-- SENDS DATA TO ACTION URL -->
+    <form method="post" action="./mailform.php">
+        <h4>POST form</h4>
+        <input name="message" type="text">
+        <button type="submit">
+            MAIL
+        </button>
+    </form>
+
+    <!-- YOU DON'T NEED AN ACTION / METHOD TO MAKE A FORM -->
+    <form>
+        <h4>More Inputs</h4>
+
+        <!-- CHECKBOXES -->
+        <input type="checkbox" name="checkbox1" value="1"/>1
+        <input type="checkbox" name="checkbox2" value="2"/>2
+
+        <!-- RADIO BUTTONS -->
+        <!-- THEY CAN BE LINKED TOGETHER -->
+        <fieldset>
+
+            <legend>
+                Question 1:
+            </legend>
+
+            <input type="radio" name="choice" value="a"/>a
+            <input type="radio" name="choice" value="b"/>b
+            <input type="radio" name="choice" value="c"/>c
+            <input type="radio" name="choice" value="d"/>d
+
+        </fieldset>
+
+        <!-- DATE SELECTION -->
+        <input type="date" name="booking"/>
+
+        <!-- COLOUR -->
+        <input type="color" name="shading"/>
+    </form>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
+
+</body>
+
+</html>
