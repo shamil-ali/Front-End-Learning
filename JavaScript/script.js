@@ -412,3 +412,95 @@ let log2 = data => console.log(data);
 
 log("message1");
 log2("message2");
+
+// SCOPE - in JavaScript
+
+/*
+	2 Main types of Scopes, LOCAL and GLOBAL
+*/
+
+// LOCAL Scope
+
+/*
+	FUNCTION Scope:
+	Variables that are declared inside a function are not accessible from outside the function
+	If you try to access them you will get a
+	REFERENCE ERROR
+*/
+
+let foo = () => {
+	let bar = `hello world`;
+}
+
+foo();
+
+// console.log(bar);
+
+/*
+ BLOCK Scope:
+ Variables declared inside a block are only accesible from inside the block
+*/
+
+{
+	let x = 1;
+}
+
+// console.log(x);
+
+/*
+ UNLESS you declare ur variable using a VAR keyword
+ and this is one of the reasons we don't use VAR
+*/
+
+{
+	var y = 2;
+}
+
+// console.log(y);
+
+
+// GLOBAL Scope
+
+/*
+	Automatically Global:
+	If we don't declare a variable but we referenc eone inside a block
+	it is automatically created and added to the global scope
+	`use strict` will prevent this
+*/
+
+let globalVar = () => {
+			greeting = `Hello!`;
+}
+
+globalVar();
+
+// console.log(greeting);
+
+/*
+	Standard Global:
+	Declaring a variable outside of a code block
+	it can be accessed from anywhere
+*/
+
+let a = `a`;
+
+console.log(a);
+
+{
+    console.log(`a is = ${a}`);
+}
+
+let b = (a) => {
+    console.log(`function b gives us ${a}`);
+}
+
+b(a);
+
+// HOW JAVASCRIPT LOOKS FOR VARIABLES
+
+/*
+	1. Local (Inside the block)
+	2. Global (Outside the block)
+	3. If none exists, CREATE and ADD to Global Scope
+*/
+
