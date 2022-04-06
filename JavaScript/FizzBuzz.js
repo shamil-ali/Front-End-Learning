@@ -1,4 +1,4 @@
-`use strict`
+'use strict'
 
 // FizzBuzz using IF / ELSE
 /*

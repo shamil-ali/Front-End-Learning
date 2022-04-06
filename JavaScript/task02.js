@@ -1,5 +1,4 @@
-`use strict`
-
+'use strict'
 let totalMoney = 4000;
 let moneyPaidSoFar = 2348;
 let totalLeftToPay;

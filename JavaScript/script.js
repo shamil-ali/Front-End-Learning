@@ -6,7 +6,7 @@
 	Stops us using protected words, accidentally making global variables etc.
 */
 
-`use strict`
+'use strict'
 
 // let let = 1;
 
@@ -285,40 +285,40 @@
 
 // LITERAL NOTATION
 
-let vehicle = {
-	type : `bike`,
-	seats : 1,
-	wheels : 2
-}
+// let vehicle = {
+// 	type : `bike`,
+// 	seats : 1,
+// 	wheels : 2
+// }
 
 // console.log(vehicle);
 // console.log(vehicle.seats);
 
 // Data can be stored in an ARRAY
 
-let garage = [
-	vehicle,
-	{type:`car`,seats:5,wheels:4}
-]
+// let garage = [
+// 	vehicle,
+// 	{type:`car`,seats:5,wheels:4}
+// ]
 
 // console.log(garage);
 
 //  Looping through an array
 
-let x = [`a`,`b`,`c`,`d`,`e`];
+// let x = [`a`,`b`,`c`,`d`,`e`];
 
-for(let i = 0; i<x.length; i++){
+// for(let i = 0; i<x.length; i++){
     // console.log(x[i]);
-}
+// }
 
 // ENHANCED FOR loops
 
 /*
 		Work with arrays of items, will always loop through EVERY item
 */
-for (let item of x) {
+// for (let item of x) {
 	// console.log(item);
-}
+// }
 
 // Specific Methods to act on ARRAYS
 
@@ -336,22 +336,22 @@ for (let item of x) {
 	Literal notaiton for JS objects
 */
 
-let newJSON = {
-	name : `cameron`,
-	age : 29
-}
+// let newJSON = {
+// 	name : `cameron`,
+// 	age : 29
+// }
 
 // To convert JSON to different datatypes we have to use OVERLOADED methods
 
 // JSON to String
 
-let str = JSON.stringify(newJSON);
+// let str = JSON.stringify(newJSON);
 
-console.log(newJSON);
-console.log(str);
+// console.log(newJSON);
+// console.log(str);
 
-let person = JSON.parse(`{"name":"ellie","age":43}`);
-console.log(person);
+// let person = JSON.parse(`{"name":"ellie","age":43}`);
+// console.log(person);
 
 // FUNCTIONS
 
@@ -363,11 +363,11 @@ console.log(person);
 		Globally scoped
 */
 
-function hello(message) {
-		console.log(message);
-}
+// function hello(message) {
+// 		console.log(message);
+// }
 
-hello(true);
+// hello(true);
 
 // RETURNS
 
@@ -375,43 +375,43 @@ hello(true);
 		When a funciton reaches a return it stops
 */
 
-let bye = false;
+// let bye = false;
 
-function goodbye() {
-		console.log(`goodbye`);
-		return bye = true;
-}
+// function goodbye() {
+// 		console.log(`goodbye`);
+// 		return bye = true;
+// }
 
-console.log(bye);
+// console.log(bye);
 
-goodbye();
+// goodbye();
 
-console.log(bye);
+// console.log(bye);
 
 //  VARIABLE RETURNS
 
-function sum(a , b) {
-		return a + b;
-}
+// function sum(a , b) {
+// 		return a + b;
+// }
 
-console.log(sum(3,2));
+// console.log(sum(3,2));
 
 // ARROW FUNCTIONS
 
-function log(data) {
-		console.log(data);
-}
+// function log(data) {
+// 		console.log(data);
+// }
 
-log = (data) => {
-		console.log(data);
-}
+// log = (data) => {
+// 		console.log(data);
+// }
 
-log = (data) => {console.log(data)}
+// log = (data) => {console.log(data)}
 
-let log2 = data => console.log(data);
+// let log2 = data => console.log(data);
 
-log("message1");
-log2("message2");
+// log("message1");
+// log2("message2");
 
 // SCOPE - in JavaScript
 
@@ -428,11 +428,11 @@ log2("message2");
 	REFERENCE ERROR
 */
 
-let foo = () => {
-	let bar = `hello world`;
-}
+// let foo = () => {
+// 	let bar = `hello world`;
+// }
 
-foo();
+// foo();
 
 // console.log(bar);
 
@@ -441,9 +441,9 @@ foo();
  Variables declared inside a block are only accesible from inside the block
 */
 
-{
-	let x = 1;
-}
+// {
+// 	let x = 1;
+// }
 
 // console.log(x);
 
@@ -452,9 +452,9 @@ foo();
  and this is one of the reasons we don't use VAR
 */
 
-{
-	var y = 2;
-}
+// {
+// 	var y = 2;
+// }
 
 // console.log(y);
 
@@ -468,11 +468,11 @@ foo();
 	`use strict` will prevent this
 */
 
-let globalVar = () => {
-			greeting = `Hello!`;
-}
+// let globalVar = () => {
+// 			greeting = `Hello!`;
+// }
 
-globalVar();
+// globalVar();
 
 // console.log(greeting);
 
@@ -482,19 +482,19 @@ globalVar();
 	it can be accessed from anywhere
 */
 
-let a = `a`;
+// let a = `a`;
 
-console.log(a);
+// console.log(a);
 
-{
-    console.log(`a is = ${a}`);
-}
+// {
+//     console.log(`a is = ${a}`);
+// }
 
-let b = (a) => {
-    console.log(`function b gives us ${a}`);
-}
+// let b = (a) => {
+//     console.log(`function b gives us ${a}`);
+// }
 
-b(a);
+// b(a);
 
 // HOW JAVASCRIPT LOOKS FOR VARIABLES
 
@@ -503,4 +503,28 @@ b(a);
 	2. Global (Outside the block)
 	3. If none exists, CREATE and ADD to Global Scope
 */
+
+//  DOM Manipulation - Document Object Model
+
+/*
+	Page
+		-> HTML
+				-> HEAD
+						-> METADATA
+						-> TITLE
+				-> BODY
+						-> HEADERS
+						-> PARAGRAPHS
+						-> DIVS
+*/
+
+import * as DOM from './dom.js';
+
+let addToList = str => {
+		let child = document.createElement(`li`);
+		child.innerHTML = str;
+		DOM.textOutput.appendChild(child);
+}
+
+DOM.textButton.onclick = () => addToList(DOM.textInput.value); //`${str}`;
 
